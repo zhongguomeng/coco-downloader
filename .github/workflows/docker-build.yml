@@ -41,8 +41,8 @@ jobs:
     - name: Build Docker image
       uses: docker/build-push-action@v5
       with:
-        context: ./coco-downloader
-        file: ./coco-downloader/Dockerfile
+        context: .
+        file: ./Dockerfile
         platforms: linux/amd64
         push: false
         tags: ${{ steps.tag.outputs.image_name }}
